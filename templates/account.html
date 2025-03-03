@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/account_style.css">
+</head>
+<body>
+
+    <header class="container_header">
+        <div class="header_wrapper">
+            <a class="logo" href="#">CARS AUCTION</a>
+            <nav>
+                <a href="/">Main</a>
+                <a href="/products">Products</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="hero">
+            <div class="hero_left">
+                <h3>Name: <span>{{ first_name }}</span></h3>
+            </div>
+            <div class="hero_right">
+                <h3>Surname: <span>{{ last_name }}</span></h3>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="products">
+            <h2>Your Products</h2>
+            <div class="products-wrapper">
+                {% for product in products %}
+                    <div class="product-card">
+                        <img src="{{ product[2] }}" alt="">
+                        <h3>{{ product[1] }}</h3>  
+                        <a href="/product/{{ product[0] }}">More information</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <a class="logout" href="/logout">Logout</a>
+        <a href="/products">Back</a>
+    </footer>
+
+    <footer class="footer">
+        <p>&copy; In 2025 Made by <span class="name">Mahmud</span> and <span class="name">Ozodbek</span></p>
+    </footer>
+
+</body>
+</html>

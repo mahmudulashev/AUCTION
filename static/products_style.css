@@ -1,0 +1,257 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background: #c5e7f4;
+    color: #333;
+    padding: 20px;
+}
+
+
+header.container {
+    background: rgb(12, 12, 147);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    background: #6168fc;
+    border-radius: 5px;
+    font-weight: 570;
+}
+
+nav a:hover {
+    background: #18426a;
+}
+
+
+main.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 1rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.form_wrapper {
+    background: #dfeffd;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form label {
+    font-weight: 600;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #a3c7f4;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background: #372ae4;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+    margin-top: 0.7rem;
+}
+
+form button:hover {
+    background: #1638a8;
+}
+
+
+.products-wrapper {
+    display: flex;
+    gap: 6rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 280px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.product-card .narx {
+    font-size: 16px;
+    font-weight: 600;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.product-card a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.product-card a:hover {
+    text-decoration: underline;
+}
+
+.product-card button {
+    padding: 7px 15px;
+    border: none;
+    background: red;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+.footer {
+    background-color: black;
+    color: gray;
+    width: 100vw;
+    text-align: center;
+    margin-top: 24.9rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.name {
+    font-style: unset;
+    font-weight: 600;
+}
+
+.product-card button:hover {
+    background: darkred;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header.container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header_wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    main.container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .products-wrapper {
+        gap: 1.5rem;
+    }
+
+    .product-card {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .product-card img {
+        height: auto;
+        max-height: 160px;
+    }
+
+    form input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    form button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+
+

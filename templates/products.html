@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mahsulotlar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/products_style.css">
+</head>
+<body>
+    
+    <header class="container">
+        <div class="header_wrapper">
+            <a class="logo" href="#">CARS AUCTION</a>
+
+            <nav>
+                <a class="LOGIN" href="/">Main</a>
+                <a class="LOGIN" href="/account">Account</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <h2>Salom, {{ username }}! Mahsulot qo‘shing:</h2>
+        
+        <div class="form_wrapper">
+            <form action="/products" method="POST" enctype="multipart/form-data">
+                <label for="product_name">Mahsulot nomini kiriting:</label>
+                <input type="text" name="product_name" placeholder="Mahsulot nomi" required>
+
+                <label for="price">Mahsulot boshlang'ich narxini kiriting:</label>
+                <input type="number" name="price" placeholder="Narxi" required>
+
+                <label for="image">Mahsulot rasmini kiriting:</label>
+                <input class="file" type="file" name="image">
+
+                <button type="submit">Qo‘shish</button>
+            </form>
+        </div>    
+
+        <h2>Mahsulotlar ro‘yxati:</h2>
+        
+
+        <div class="products-wrapper">
+            {% for product in products %}
+                <div class="product-card">
+                    {% if product[5] %}
+                        <img src="{{ product[5] }}" alt="">
+                    {% endif %}
+                    
+                    <h3>{{ product[1] }}</h3>  
+                    <p class="narx">{{ product[2] }} so‘m</p>  
+                    <a href="/product/{{ product[0] }}">Batafsil</a>
+
+                    {% if product[6] == user_id %} 
+                        <form action="/delete_product/{{ product[0] }}" method="POST">
+                            <button type="submit">O‘chirish</button>
+                        </form>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+
+
+
+    </main>
+
+
+    <footer class="footer">
+        <p>&copy; In 2025 Made by <span class="name">Mahmud</span> and <span class="name">Ozodbek</span></p>
+    </footer>
+</body>
+</html>

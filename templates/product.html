@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product[1] }} - Mahsulot sahifasi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/product_style.css">
+</head>
+<body>
+    
+    <header class="container_header">
+        <div class="header_wrapper">
+            <a class="logo" href="#">CARS AUCTION</a>
+
+            <nav>
+                <a class="LOGIN" href="/">Main</a>
+                <a class="LOGIN" href="/account">Account</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+
+        {% if product[5] %}
+        <img src="{{ product[5] }}" alt="" class="product-rasm">
+        {% endif %}
+
+        <ul>
+            <li class="Ismi">  <p>Ismi: <span>{{ product[1] }}</p></span> </li>
+           <li> <p>Boshlang'ich narxi: <span>{{ product[2] }} so‘m</p></span></li>
+            <li class="yaratuvchi"><p>Yaratuvchi: <span> {{ product[4] }}</p></span></li>
+           <li><p class="">Yaratilgan vaqti: <span>{{ product[3] }}</p></span></li> 
+        </ul>
+
+        <hr>
+
+
+        <section class="taklif">
+            <h2>Taklif berish</h2>
+            <form method="POST">
+                <label for="offer_price">Taklifingiz narxi:</label>
+                <input type="number" name="offer_price" required>
+                <button type="submit">Taklif berish</button>
+            </form>
+        </section>
+
+        <hr>
+
+
+        <section class="takliflar">
+            <h2>Takliflar</h2>
+            {% if offers %}
+                <ul>
+                    {% for offer in offers %}
+                        <li>{{ offer[2] }}: {{ offer[0] }} so‘m ({{ offer[1] }})</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="taklifsiz">Hozircha hech qanday taklif yo‘q.</p>
+            {% endif %}
+        </section>
+
+        <br>
+        <a href="/products" class="osti">Mahsulotlar sahifasiga qaytish</a>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; In 2025 Made by <span class="name">Mahmud</span> and <span class="name">Ozodbek</span></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/login_style.css">
+</head>
+<body>
+    <main>
+        <h3>LOGIN</h3>
+        <form action="/login" method="post">
+            <span>
+                <label for="username">Username*</label>
+                <input type="text" id="username" name="username">
+             </span>
+             <span>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+            </span>
+            <button type="submit">Sign In</button>
+        </form>
+
+        <h3 class="error">{{ error }}</h3>
+
+    <a href="/register">Don't have an account? Sign Up</a>
+    </main>
+</body>
+</html>

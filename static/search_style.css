@@ -1,0 +1,182 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #e3f2fd; 
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.container_header {
+    width: 90%;
+    background: rgb(14, 14, 130);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header_wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    background: #6168fc;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    background: #2367a6;
+}
+
+
+main {
+    width: 90%;
+    max-width: 900px;
+    background: white;
+    color: #0d47a1;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.products-wrapper {
+    display: flex;
+    gap: 6rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 280px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.product-card .narx {
+    font-size: 16px;
+    font-weight: 600;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.product-card a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.product-card a:hover {
+    text-decoration: underline;
+}
+
+.product-card button {
+    padding: 7px;
+    width: 100%;
+    border: none;
+    background:#007bff;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.product-card button:hover {
+    background: #0f5aa9;
+}
+
+
+.footer {
+    background-color: black;
+    color: gray;
+    width: 100vw;
+    text-align: center;
+    margin-top: 24.9rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.name {
+    font-style: unset;
+    font-weight: 600;
+}
+
+h2 {
+    color:#0d47a1;
+    text-align: center;
+    margin-top: 3rem;
+    text-transform: capitalize;
+    font-family: "Outfit", serif;
+}
+
+h3, a, p {
+    font-family: "Outfit", serif;
+    text-decoration: none;
+}
+
+.back{
+    margin-top: 1rem;
+}
+
+.topilmadi {
+    font-size: 3rem;
+    margin-top: 1rem;
+    color: red;
+}
+

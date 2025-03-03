@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/register_style.css">
+</head>
+<body>
+    <main>
+        <h3>REGISTER</h3>
+        <form action="/register" method="POST">
+            <span>
+                <label for="first_name">First Name*</label>
+                <input type="text" id="first_name" name="first_name" required>
+            </span>
+            <span>
+                <label for="last_name">Last Name*</label>
+                <input type="text" id="last_name" name="last_name" required>
+            </span>
+            <span>
+                <label for="username">Username*</label>
+                <input type="text" id="username" name="username" required>
+             </span>
+             <span>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </span>
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <h3 class="error">{{ error }}</h3>
+
+        <a href="/login">Do you have an account? Sign In</a>
+
+    </main>
+</body>
+</html>

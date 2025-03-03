@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars Auction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+
+    <header class="container">
+        <div class="header_wrapper">
+            <a class="logo" href="#">CARS AUCTION</a>
+
+            <form action="/search" method="get">
+                <input type="text" name="q" placeholder="Enter the product name..." required>
+                <button class="Search2" type="submit">Search</button>
+            </form>        
+
+            <nav>
+                <a href="/account">Account</a>
+                <a href="/products">Products</a>
+                <a href="#footer">Contacts</a>
+                <a href="/login" class="LOGIN">LOGIN</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="container">
+        <div class="hero">
+            <div class="hero_wrapper">
+                <h2 class="birinchi">Cars Auction</h2>
+                <p>We have the best cars!</p>
+               <a href="/products"> <button type="button">View Products</button></a>
+            </div>
+        </div>
+
+
+        <div class="cards">
+
+            <h3 class="heading2">BID ON YOUR DREAM CAR</h3>
+            <h2 class="heading3">Fast deals and unbeatable prices await!</h2>
+        
+            <div class="cardsWrapper">
+                <div class="cards-item">
+                    <img class="img1" src="/static/photos/Merc.jpeg" alt="">
+                    <p class="text1 yozuv">Luxury sedan</p>
+                    <p class="text1 yozuv2">Drive in style in with our Luxury <br>Sedan, perfect for any <br>occasion.</p>
+                </div>
+                <div class="cards-item">
+                    <img class="img1" src="/static/photos/BMW.jpeg" alt="">
+                    <p class="text1 yozuv">Sport SUV</p>
+                    <p class="text1 yozuv2">Adventure awaits with our dynamic Sporty SUV, ready for action.</p>
+                </div>
+                <div class="cards-item">
+                    <img class="img1" src="/static/photos/Honda.jpeg" alt="">
+                    <p class="text1 yozuv">Compact city car</p>
+                    <p class="text1 yozuv2">Effortlessly maneuver through <br> the city with our Compact City <br>Car.</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="cards2">
+            <div class="leftC">
+                <h3 class="heading2 headings">YOUR CAR AUCTION SPOT</h2>
+                <h2 class="heading3 headings">Fast deals and great prices</h2>            
+                <p class="text1 text3">Cars Auction provides a seamless online platform for buyers and sellers in Samarkand. Experience swift transactions and discover the best prices in the market. Our user-friendly interface ensures that you can easily navigate through listings, making your auction  experience both enjoyable and efficient. Join our community today and take advantage of the vibrant car auction scene, where your next vehicle awaits!</p>
+                <a href="/products" class="text1 text4">Get in touch</a>
+            </div>
+            <div class="rightC">
+                <img class="img2" src="/static/photos/Cars.jpeg" alt="">
+            </div>
+        </div>
+
+    </main>
+
+    <h2>My name is Ozodbek</h2>
+
+
+    <footer id="footer" class="container">
+        <div class="footer_wrapper">
+            <div class="footer_section">
+                <h3>Contact us</h3>
+                <p class="footer_matn">Email: carauction@gmail.com</p>
+                <p class="footer_matn">Phone: +998 91 701 02 62</p>
+                <p class="footer_matn">Address: Urgut, O‘zbekiston</p>
+            </div>
+            <div class="footer_section">
+                <h3>Social Networks</h3>
+                <div class="social_links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
